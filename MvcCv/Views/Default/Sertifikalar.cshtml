@@ -1,0 +1,16 @@
+﻿@using MvcCv.Models;
+@model List<TBL_SERTİFİKA>
+
+@{
+    Layout = null;
+}
+
+<ul class="fa-ul mb-0">
+    @foreach (var item in Model)
+    {
+        <li>
+            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+            @item.Aciklama
+        </li>
+    }
+</ul>

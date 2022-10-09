@@ -1,0 +1,59 @@
+﻿@using MvcCv.Models;
+@model List<TBL_İLETİSİM>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- /.col -->
+            <div class="col-md-12">
+                <div class="card mt-4">
+
+                    <div class="card-body">
+                        @foreach (var item in Model)
+                        {
+                            <div class="tab-pane" id="timeline">
+                                <!-- The timeline -->
+                                <div class="timeline timeline-inverse">
+                                    <!-- timeline time label -->
+                                    <div class="time-label">
+                                        <span class="bg-danger">
+                                            @(((DateTime)item.Tarih).ToString("dd MMM yyyy"))
+                                        </span>
+                                    </div>
+                                    <!-- /.timeline-label -->
+                                    <!-- timeline item -->
+                                    <div>
+                                        <i class="fas fa-certificate bg-primary"></i>
+                                        
+                                        <div class="timeline-item">
+                                            <h3 class="timeline-header">@item.Adsoyad - @item.Konu</h3>
+                                            <div class="timeline-body">
+                                                @item.Mesaj
+                                                <br />
+                                                @item.Mail 
+                                            </div>
+                                            <div class="timeline-footer">
+                                                <a href="/Sertifika/SertifikaGetir/@item.ID" class="btn btn-primary btn-sm">Düzenle</a>
+                                                <a href="/Sertifika/SertifikaSil/@item.ID" class="btn btn-danger btn-sm">Sil</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+                    </div>
+                    <!-- /.tab-content -->
+                </div><!-- /.card-body -->
+            </div>
+            <!-- /.nav-tabs-custom -->
+        </div>
+        <!-- /.col -->
+    </div>
+
+</section>

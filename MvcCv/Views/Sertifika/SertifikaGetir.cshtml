@@ -1,0 +1,22 @@
+﻿@model MvcCv.Models.TBL_SERTİFİKA
+@{
+    ViewBag.Title = "SertifikaGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Sertifika Getir</h2>
+
+<form class="form-group" method="post">
+
+
+    @Html.Label("Sertifika Bilgileri")
+    @Html.TextBoxFor(x => x.Aciklama, new { @class = "form-control" })
+    <br />
+
+
+    @Html.Label("Sertifika Tarihi")
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+
+
+    <button class="btn btn-success mt-3">Sertifikayı Düzenle</button>
+</form>

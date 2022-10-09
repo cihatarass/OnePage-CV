@@ -1,0 +1,21 @@
+﻿@model MvcCv.Models.TBL_YETENEK 
+
+@{
+    ViewBag.Title = "YetenekGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yetenek: @Model.Yetenek Düzenle</h2>
+
+<form class="form-group" method="post">
+
+
+    @Html.Label("Yetenek Açıklaması")
+    @Html.TextBoxFor(x => x.Yetenek, new { @class = "form-control" })
+
+    @Html.Label("Yetenek Derecesi")
+    @Html.TextBoxFor(x => x.oran, new { @class = "form-control" })
+
+
+    <button class="btn btn-success mt-3">Düzenle</button>
+</form>

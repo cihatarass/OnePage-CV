@@ -1,0 +1,29 @@
+﻿@model MvcCv.Models.TBL_EGİTİM
+@{
+    ViewBag.Title = "EgitimGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Eğitim: @Model.Baslik Düzenle</h2>
+
+<form class="form-group" method="post">
+
+
+    @Html.Label("Üniversite Adı")
+    @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+    <br />
+    @Html.Label("Fakülte")
+    @Html.TextBoxFor(x => x.AltBaslik, new { @class = "form-control" })
+    <br />
+    @Html.Label("Bölüm")
+    @Html.TextBoxFor(x => x.AltBaslik2, new { @class = "form-control" })
+    <br />
+    @Html.Label("Genel Not Ortalaması")
+    @Html.TextBoxFor(x => x.GNO, new { @class = "form-control" })
+    <br />
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+
+
+    <button class="btn btn-success mt-3">Düzenle</button>
+</form>

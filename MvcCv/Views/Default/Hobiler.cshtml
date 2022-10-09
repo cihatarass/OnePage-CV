@@ -1,0 +1,11 @@
+﻿@using MvcCv.Models;
+@model  List<TBL_HOBİ>
+
+@{
+    Layout = null;
+}
+@foreach (var item in Model)
+{
+    <p>@item.Aciklama1</p>
+    <p class="mb-0">@item.Aciklama2</p>
+}

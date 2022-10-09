@@ -1,0 +1,25 @@
+﻿@model MvcCv.Models.TBL_SOSYALM
+
+@{
+    ViewBag.Title = "SosyalEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Sosyal Medya Ekle</h2>
+
+<form class="form-group" method="post">
+
+
+    @Html.Label("Link Yolu")
+    @Html.TextBoxFor(x => x.Ad, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Link, "", new { @class = "alert-danger" })
+    <br />
+
+    @Html.Label("İcon Class")
+    @Html.TextBoxFor(x => x.Link, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Link, "", new { @class = "alert-danger" })
+    <br />
+
+
+    <button class="btn btn-success mt-3">Sosyal M. Ekle</button>
+</form>

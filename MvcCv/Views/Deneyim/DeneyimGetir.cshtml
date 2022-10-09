@@ -1,0 +1,31 @@
+﻿@model MvcCv.Models.TBL_DENEYİM
+
+@{
+    ViewBag.Title = "DeneyimGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="mt-3">Deneyim Güncelleme</h2>
+
+@using (Html.BeginForm()) { 
+    @Html.HiddenFor(x => x.ID)
+
+    @Html.Label("Başlık")
+    @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+
+    @Html.Label("Alt Başlık")
+    @Html.TextBoxFor(x => x.AltBaslik, new { @class = "form-control" })
+
+    @Html.Label("Açıklama")
+    @Html.TextBoxFor(x => x.Aciklama, new { @class = "form-control" })
+
+    @Html.Label("Tarih Aralığı")
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+
+    <button class="btn btn-success mt-3">Deneyimi Düzenle</button>
+}
+
+
+
+
+<a href="/Deneyim/Index" class="btn btn-primary mt-3">Listeye Geri Dön</a>

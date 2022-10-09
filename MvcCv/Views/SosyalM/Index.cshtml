@@ -1,0 +1,46 @@
+﻿@using MvcCv.Models
+@model List<TBL_SOSYALM>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Sosyal Medya</h2>
+
+<table class="table table-striped table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Ad</th>
+        <th>Link</th>
+        <th>Durum</th>
+        <th></th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+  
+
+
+<tr>
+    <td>@item.ID</td>
+    <td>@item.Ad</td>
+    <td>@item.Link</td>
+    @if (@item.Durum == true)
+    {
+    <td>Aktif</td>
+    }
+
+    else { 
+    <td>Pasif</td>
+    }
+    <td><a href="/SosyalM/SosyalGetir/@item.ID" class="btn btn-warning">Düzenle</a></td>
+    <td><a class="btn btn-danger" href="/SosyalM/SosyalSil/@item.ID">Sil</a></td>
+</tr>
+    }
+
+
+</table>
+
+<a href="/SosyalM/SosyalEkle" class="btn btn-success">Sosyal M. Ekle</a>
+

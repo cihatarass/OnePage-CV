@@ -1,0 +1,39 @@
+﻿@model MvcCv.Models.TBL_EGİTİM 
+
+@{
+    ViewBag.Title = "EgitimEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Eğitim Ekle</h2>
+
+<form class="form-group" method="post">
+
+
+    @Html.Label("Üniversite")
+    @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Baslik, "", new { @class = "alert-danger" })
+    <br />
+
+    @Html.Label("Fakülte")
+    @Html.TextBoxFor(x => x.AltBaslik, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.AltBaslik, "", new { @class = "alert-danger" })
+    <br />
+
+    @Html.Label("Bölüm")
+    @Html.TextBoxFor(x => x.AltBaslik2, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.AltBaslik2, "", new { @class = "alert-danger" })
+    <br />
+
+    @Html.Label("Genel Not Ortalaması")
+    @Html.TextBoxFor(x => x.GNO, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.GNO, "", new { @class = "alert-warning" })
+    <br />
+
+
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+
+
+    <button class="btn btn-success mt-3">Eğitim Ekle</button>
+</form>

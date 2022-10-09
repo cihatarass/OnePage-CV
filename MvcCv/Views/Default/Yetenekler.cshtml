@@ -1,0 +1,17 @@
+﻿@using MvcCv.Models;
+@model  List<TBL_YETENEK>
+
+@{ Layout = null;
+}
+
+@foreach (var item in Model)
+{
+    <ul class="fa-ul mb-0">
+        <li>
+            <span class="fa-li"><i class="fas fa-check"></i></span>
+            @item.Yetenek
+        </li>
+
+    </ul>
+}
+
